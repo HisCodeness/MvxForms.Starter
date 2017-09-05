@@ -43,7 +43,7 @@ namespace MvxForms.Starter.ViewModels
             RaisePropertyChanged(() => Time);
         }
 
-        private string text = "Hello MvvmCross";
+        private string text = "Hello MvvmCross !";
         public string Text
         {
             get { return text; }
