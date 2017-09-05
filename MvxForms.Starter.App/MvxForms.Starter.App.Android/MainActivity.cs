@@ -1,28 +1,25 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using MvvmCross.Forms.Presenters;
-using MvvmCross.Platform;
-using MvvmCross.Droid.Views;
-using Xamarin.Forms;
-using MvvmCross.Forms.Core;
-using MvvmCross.Core.Views;
-using MvvmCross.Forms.Droid.Presenters;
-using MvvmCross.Droid.Platform;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Views;
+using MvvmCross.Droid.Platform;
+using MvvmCross.Forms.Core;
+using MvvmCross.Forms.Droid.Presenters;
+using MvvmCross.Platform;
 using MvvmCross.Platform.Core;
 using MvvmCross.Platform.IoC;
+using Xamarin.Forms;
 
 namespace MvxForms.Starter.App.Droid
 {
     [Activity(Label = "MvxForms.Starter.App", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        /// <summary>
+        /// Activity creation
+        /// </summary>
+        /// <param name="bundle"></param>
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -33,24 +30,29 @@ namespace MvxForms.Starter.App.Droid
             //Init forms
             Forms.Init(this, bundle);
 
+            // Init Mvvmcross stuff
             InitialiseMvx();
 
-            //Create mvxformsApp
+            // Create mvxformsApp
             var mvxFormsApp = new MvxFormsApplication();
             var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsDroidPagePresenter;
 
-            //Assign the viewPresenter
+            // Assign the viewPresenter
             presenter.FormsApplication = mvxFormsApp;
             LoadApplication(mvxFormsApp);
 
+            // Life time manager
             IMvxAndroidActivityLifetimeListener list = Mvx.Resolve<IMvxAndroidActivityLifetimeListener>();
             list.OnStart(this);
 
             //Start mvxApp
-            var start = Mvx.Resolve<IMvxAppStart>();
-            start.Start();
+            var appStart = Mvx.Resolve<IMvxAppStart>();
+            appStart.Start();
         }
 
+        /// <summary>
+        /// Initialize Mvvmcross stuff
+        /// </summary>
         private void InitialiseMvx()
         {
             if (MvxSingleton<IMvxIoCProvider>.Instance == null)

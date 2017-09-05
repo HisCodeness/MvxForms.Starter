@@ -1,46 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MvvmCross.Core.ViewModels;
+﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Core.Views;
 using MvvmCross.Forms.Core;
 using MvvmCross.Forms.Uwp;
 using MvvmCross.Forms.Uwp.Presenters;
 using MvvmCross.Platform;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Uwp.Platform;
 using MvvmCross.Uwp.Views;
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
 
 namespace MvxForms.Starter.App.UWP
 {
+    /// <summary>
+    /// Setup class
+    /// </summary>
     public class Setup : MvxFormsWindowsSetup
     {
-        private readonly LaunchActivatedEventArgs _launchActivatedEventArgs;
+        /// <summary>
+        /// Launch event arg
+        /// </summary>
+        private readonly LaunchActivatedEventArgs launchActivatedEventArgs;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="rootFrame"></param>
+        /// <param name="e"></param>
         public Setup(Windows.UI.Xaml.Controls.Frame rootFrame, LaunchActivatedEventArgs e) : base(rootFrame, e)
         {
-            _launchActivatedEventArgs = e;
+            launchActivatedEventArgs = e;
         }
 
-
+        /// <summary>
+        /// Create app
+        /// </summary>
+        /// <returns></returns>
         protected override IMvxApplication CreateApp()
         {
             return new CoreApp();
         }
 
-
+        /// <summary>
+        /// Create default presenter
+        /// </summary>
+        /// <param name="rootFrame"></param>
+        /// <returns></returns>
         protected override IMvxWindowsViewPresenter CreateViewPresenter(IMvxWindowsFrame rootFrame)
         {
-            Forms.Init(_launchActivatedEventArgs);
-
-
-            var xamarinFormsApp = new MvxFormsApplication();
-            var presenter = new MvxFormsUwpPagePresenter(rootFrame, xamarinFormsApp);
+            Forms.Init(launchActivatedEventArgs);
+            
+            var presenter = new MvxFormsUwpPagePresenter(rootFrame, new MvxFormsApplication());
             Mvx.RegisterSingleton<IMvxViewPresenter>(presenter);
 
             return presenter;

@@ -3,7 +3,7 @@
      xmlns="http://xamarin.com/schemas/2014/forms"
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      xmlns:local="clr-namespace:MvxForms.Core"
-     x:Class="MvxForms.Starter.App.MainPage"
+     x:Class="MvxForms.Starter.App.Views.MainPage"
      xmlns:viewModels="clr-namespace:MvxForms.Starter.ViewModels"
      xmlns:d="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms">
     <StackLayout VerticalOptions="Center">

@@ -1,7 +1,6 @@
 using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
-using MvvmCross.Forms.Droid;
 using Xamarin.Forms;
 
 namespace MvxForms.Starter.App.Droid
@@ -15,6 +14,9 @@ namespace MvxForms.Starter.App.Droid
         , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public SplashScreen()
             : base(Resource.Layout.SplashScreen)
         {
@@ -30,6 +32,10 @@ namespace MvxForms.Starter.App.Droid
             }
         }
 
+        /// <summary>
+        /// Splash creation
+        /// </summary>
+        /// <param name="bundle"></param>
         protected override void OnCreate(Android.OS.Bundle bundle)
         {
             Forms.Init(this, bundle);

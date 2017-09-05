@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
-using UIKit;
+﻿using UIKit;
 
 namespace MvxForms.Starter.App.iOS
 {
+    /// <summary>
+    /// iOS application
+    /// </summary>
     public class Application
     {
         // This is the main entry point of the application.
