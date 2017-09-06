@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using MvxForms.Starter.Services;
 
@@ -15,12 +16,18 @@ namespace MvxForms.Starter.ViewModels
         private readonly IAppService appService;
 
         /// <summary>
+        /// Navigation Service
+        /// </summary>
+        private readonly IMvxNavigationService navigationService;
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="appService"></param>
-        public MainViewModel(IAppService appService)
+        public MainViewModel(IAppService appService, IMvxNavigationService navigationService)
         {
             this.appService = appService;
+            this.navigationService = navigationService;
         }
 
         /// <summary>
@@ -41,6 +48,12 @@ namespace MvxForms.Starter.ViewModels
         {
             Text = "Hello MvvmCross";
             RaisePropertyChanged(() => Time);
+        }
+
+        public IMvxCommand NextCommand => new MvxCommand(GoNext);
+        private void GoNext()
+        {
+            navigationService.Navigate<SecondViewModel, string>(text);
         }
 
         private string text = "Hello MvvmCross !";

@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<d:MvxContentPage x:TypeArguments="viewModels:MainViewModel"
+<d:MvxContentPage x:TypeArguments="viewModels:SecondViewModel"
      xmlns="http://xamarin.com/schemas/2014/forms"
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
      xmlns:local="clr-namespace:MvxForms.Core"
-     x:Class="MvxForms.Starter.App.Views.MainPage"
+     x:Class="MvxForms.Starter.App.Views.SecondPage"
      xmlns:viewModels="clr-namespace:MvxForms.Starter.ViewModels"
      xmlns:d="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms">
     <StackLayout VerticalOptions="Center">
-        <Entry Text="{Binding Text}" Margin="20"/>
-        <Button Command="{Binding ResetTextCommand}" Text="Click me" Margin="20"/>
-        <Button Command="{Binding NextCommand}" Text="Go next" Margin="20"/>
-        <Label Text="{Binding Time, Mode=OneWay}" Margin="20"/>
+        <Label Text="{Binding Title, Mode=OneWay}" Margin="20"/>
+        <Button Text="Go back" Command="{Binding GoBackCommand}"/>
     </StackLayout>
 
 
