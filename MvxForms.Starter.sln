@@ -19,6 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.ViewModels
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.Services", "MvxForms.Starter.Services\MvxForms.Starter.Services.csproj", "{1A21C143-16D8-49A1-8AA8-0ECC4819EF58}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RenameSolution", "RenameSolution", "{B5F8742B-105A-465C-A4B6-A03DB861F140}"
+	ProjectSection(SolutionItems) = preProject
+		Rename\README.md = Rename\README.md
+		Rename\SetProjectName.exe = Rename\SetProjectName.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
