@@ -58,20 +58,20 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="MvvmCross.Binding, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+    <Reference Include="MvvmCross.Binding, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Core, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+    <Reference Include="MvvmCross.Core, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Core.5.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Forms, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Forms.5.1.1\lib\portable-net45+netcore45+wpa81+MonoAndroid10+Xamarin.iOS10\MvvmCross.Forms.dll</HintPath>
+    <Reference Include="MvvmCross.Forms, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Forms.5.2.0\lib\portable-net45+netcore45+wpa81+MonoAndroid10+Xamarin.iOS10\MvvmCross.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Localization, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+    <Reference Include="MvvmCross.Localization, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="MvvmCross.Platform, Version=5.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Platform.5.1.1\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+    <Reference Include="MvvmCross.Platform, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
