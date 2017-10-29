@@ -1,12 +1,11 @@
 using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
-using Xamarin.Forms;
 
 namespace MvxForms.Starter.App.Droid
 {
     [Activity(
-        Label = "MvxForms.Starter.App.Droid"
+        Label = "MvxForms.Starter"
         , MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"
@@ -22,33 +21,13 @@ namespace MvxForms.Starter.App.Droid
         {
         }
 
-        private bool isInitializationComplete = false;
-        public override void InitializationComplete()
-        {
-            if (!isInitializationComplete)
-            {
-                isInitializationComplete = true;
-                StartActivity(typeof(MainActivity));
-            }
-        }
-
         /// <summary>
-        /// Splash creation
+        /// Set the first activity to show
         /// </summary>
-        /// <param name="bundle"></param>
-        protected override void OnCreate(Android.OS.Bundle bundle)
+        protected override void TriggerFirstNavigate()
         {
-            Forms.Init(this, bundle);
-            // Leverage controls' StyleId attrib. to Xamarin.UITest
-            Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) =>
-            {
-                if (!string.IsNullOrWhiteSpace(e.View.StyleId))
-                {
-                    e.NativeView.ContentDescription = e.View.StyleId;
-                }
-            };
-
-            base.OnCreate(bundle);
+            StartActivity(typeof(FormsActivity));
+            base.TriggerFirstNavigate();
         }
     }
 }

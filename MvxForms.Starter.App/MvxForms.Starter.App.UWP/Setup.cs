@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross.Core.Views;
-using MvvmCross.Forms.Core;
+using MvvmCross.Forms.Platform;
 using MvvmCross.Forms.Uwp;
 using MvvmCross.Forms.Uwp.Presenters;
 using MvvmCross.Platform;
@@ -47,8 +47,8 @@ namespace MvxForms.Starter.App.UWP
         protected override IMvxWindowsViewPresenter CreateViewPresenter(IMvxWindowsFrame rootFrame)
         {
             Forms.Init(launchActivatedEventArgs);
-            
-            var presenter = new MvxFormsUwpPagePresenter(rootFrame, new MvxFormsApplication());
+
+            var presenter = new MvxFormsUwpViewPresenter(rootFrame, new MvxFormsApplication());
             Mvx.RegisterSingleton<IMvxViewPresenter>(presenter);
 
             return presenter;

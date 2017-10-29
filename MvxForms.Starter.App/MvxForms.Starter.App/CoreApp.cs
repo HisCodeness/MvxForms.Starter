@@ -22,7 +22,7 @@ namespace MvxForms.Starter.App
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<MainViewModel>();
+            RegisterNavigationServiceAppStart<MainViewModel>();
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
@@ -6,7 +7,7 @@ namespace MvxForms.Starter.ViewModels
     /// <summary>
     /// SecondiewModel class
     /// </summary>
-    public class SecondViewModel : MvxViewModel<string, string>
+    public class SecondViewModel : BaseViewModel<string, string>
     {
         /// <summary>
         /// Navigation service
@@ -30,9 +31,10 @@ namespace MvxForms.Starter.ViewModels
         /// Initialize view model
         /// </summary>
         /// <returns></returns>
-        public override void Prepare(string parameter)
+        public override Task Initialize()
         {
-            text = parameter;
+            text = Parameter;
+            return base.Initialize();
         }
 
         #region Bindings tests

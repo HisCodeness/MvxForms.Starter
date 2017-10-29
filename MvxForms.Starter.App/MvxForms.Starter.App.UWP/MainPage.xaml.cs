@@ -20,7 +20,7 @@ namespace MvxForms.Starter.App.UWP
             var start = Mvx.Resolve<IMvxAppStart>();
             start.Start();
 
-            var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsUwpPagePresenter;
+            var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsUwpViewPresenter;
 
             LoadApplication(presenter.FormsApplication);
         }

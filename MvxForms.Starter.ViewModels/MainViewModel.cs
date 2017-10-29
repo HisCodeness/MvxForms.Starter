@@ -8,7 +8,7 @@ namespace MvxForms.Starter.ViewModels
     /// <summary>
     /// MainViewModel class
     /// </summary>
-    public class MainViewModel : MvxViewModel
+    public class MainViewModel : BaseViewModel<object, object>
     {
         /// <summary>
         /// Test app service
@@ -37,7 +37,6 @@ namespace MvxForms.Starter.ViewModels
         public override Task Initialize()
         {
             //TODO: Add starting logic here
-
             return base.Initialize();
         }
 

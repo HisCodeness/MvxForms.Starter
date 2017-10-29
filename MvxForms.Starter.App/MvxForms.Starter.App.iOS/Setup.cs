@@ -1,11 +1,8 @@
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Forms.Core;
 using MvvmCross.Forms.iOS;
-using MvvmCross.Forms.iOS.Presenters;
+using MvvmCross.Forms.Platform;
 using MvvmCross.iOS.Platform;
-using MvvmCross.iOS.Views.Presenters;
 using UIKit;
-using Xamarin.Forms;
 
 namespace MvxForms.Starter.App.iOS
 {
@@ -37,22 +34,9 @@ namespace MvxForms.Starter.App.iOS
         /// Create Forms app
         /// </summary>
         /// <returns></returns>
-        protected override MvvmCross.Forms.Core.MvxFormsApplication CreateFormsApplication()
+        protected override MvxFormsApplication CreateFormsApplication()
         {
             return new App();
-        }
-
-        /// <summary>
-        /// Create default presenter
-        /// </summary>
-        /// <returns></returns>
-        protected override IMvxIosViewPresenter CreatePresenter()
-        {
-            Forms.Init();
-
-            var xamarinFormsApp = new MvxFormsApplication();
-
-            return new MvxFormsIosPagePresenter(Window, xamarinFormsApp);
         }
     }
 }
