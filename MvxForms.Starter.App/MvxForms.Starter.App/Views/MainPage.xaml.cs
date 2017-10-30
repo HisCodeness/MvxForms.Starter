@@ -1,4 +1,4 @@
-﻿using MvvmCross.Forms.Core;
+﻿using MvvmCross.Forms.Views;
 using MvxForms.Starter.ViewModels;
 
 namespace MvxForms.Starter.App.Views

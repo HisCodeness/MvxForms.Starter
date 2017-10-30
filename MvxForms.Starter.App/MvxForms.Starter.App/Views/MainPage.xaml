@@ -5,7 +5,7 @@
      xmlns:local="clr-namespace:MvxForms.Core"
      x:Class="MvxForms.Starter.App.Views.MainPage"
      xmlns:viewModels="clr-namespace:MvxForms.Starter.ViewModels"
-     xmlns:d="clr-namespace:MvvmCross.Forms.Core;assembly=MvvmCross.Forms">
+     xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms">
     <StackLayout VerticalOptions="Center">
         <Entry Text="{Binding Text}" Margin="20"/>
         <Button Command="{Binding ResetTextCommand}" Text="Click me" Margin="20"/>

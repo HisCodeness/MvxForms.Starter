@@ -1,4 +1,4 @@
-﻿using MvvmCross.Forms.Core;
+using MvvmCross.Forms.Platform;
 
 namespace MvxForms.Starter.App
 {

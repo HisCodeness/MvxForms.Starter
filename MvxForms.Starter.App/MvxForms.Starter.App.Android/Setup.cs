@@ -1,10 +1,7 @@
 using Android.Content;
 using MvvmCross.Core.ViewModels;
-using MvvmCross.Core.Views;
-using MvvmCross.Droid.Views;
-using MvvmCross.Forms.Droid;
-using MvvmCross.Forms.Droid.Presenters;
-using MvvmCross.Platform;
+using MvvmCross.Forms.Droid.Platform;
+using MvvmCross.Forms.Platform;
 
 namespace MvxForms.Starter.App.Droid
 {
@@ -34,21 +31,9 @@ namespace MvxForms.Starter.App.Droid
         /// Create forms app
         /// </summary>
         /// <returns></returns>
-        protected override MvvmCross.Forms.Core.MvxFormsApplication CreateFormsApplication()
+        protected override MvxFormsApplication CreateFormsApplication()
         {
             return new App();
-        }
-
-        /// <summary>
-        /// Create and register the default presenter
-        /// </summary>
-        /// <returns></returns>
-        protected override IMvxAndroidViewPresenter CreateViewPresenter()
-        {
-            var presenter = new MvxFormsDroidPagePresenter();
-            Mvx.RegisterSingleton<IMvxViewPresenter>(presenter);
-
-            return presenter;
         }
     }
 }
