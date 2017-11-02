@@ -2,6 +2,7 @@ using Android.Content;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Forms.Droid.Platform;
 using MvvmCross.Forms.Platform;
+using MvvmCross.Platform.Logging;
 
 namespace MvxForms.Starter.App.Droid
 {
@@ -35,5 +36,11 @@ namespace MvxForms.Starter.App.Droid
         {
             return new App();
         }
+
+        /// <summary>
+        /// None logger => Known issue in Mvvmcross 5.4
+        /// </summary>
+        /// <returns></returns>
+        protected override MvxLogProviderType GetDefaultLogProviderType() => MvxLogProviderType.None;
     }
 }

@@ -7,8 +7,8 @@
      xmlns:viewModels="clr-namespace:MvxForms.Starter.ViewModels"
      xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms">
     <StackLayout VerticalOptions="Center">
-        <Label Text="{Binding Title, Mode=OneWay}" Margin="20"/>
-        <Button Text="Go back" Command="{Binding GoBackCommand}"/>
+        <Label AutomationId="LblTitle" Text="{Binding Title, Mode=OneWay}" Margin="20"/>
+        <Button AutomationId="BtnBack" Text="Go back" Command="{Binding GoBackCommand}"/>
     </StackLayout>
 
 

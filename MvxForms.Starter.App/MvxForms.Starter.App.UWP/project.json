@@ -1,13 +1,12 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
-    "MvvmCross": "5.3.2",
-    "MvvmCross.Binding": "5.3.2",
-    "MvvmCross.Core": "5.3.2",
-    "MvvmCross.Forms": "5.3.2",
-    "MvvmCross.Forms.StarterPack": "5.3.2",
-    "MvvmCross.Platform": "5.3.2",
-    "Xamarin.Forms": "2.4.0.18342"
+    "MvvmCross": "5.4.0",
+    "MvvmCross.Binding": "5.4.0",
+    "MvvmCross.Core": "5.4.0",
+    "MvvmCross.Forms": "5.4.0",
+    "MvvmCross.Platform": "5.4.0",
+    "Xamarin.Forms": "2.4.0.38779"
   },
   "frameworks": {
     "uap10.0.10586": {}

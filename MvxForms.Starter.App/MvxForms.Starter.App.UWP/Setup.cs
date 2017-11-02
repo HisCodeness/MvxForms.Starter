@@ -4,6 +4,7 @@ using MvvmCross.Forms.Platform;
 using MvvmCross.Forms.Uwp;
 using MvvmCross.Forms.Uwp.Presenters;
 using MvvmCross.Platform;
+using MvvmCross.Platform.Logging;
 using MvvmCross.Uwp.Views;
 using Windows.ApplicationModel.Activation;
 using Xamarin.Forms;
@@ -53,5 +54,11 @@ namespace MvxForms.Starter.App.UWP
 
             return presenter;
         }
+
+        /// <summary>
+        /// None logger => Known issue in Mvvmcross 5.4
+        /// </summary>
+        /// <returns></returns>
+        protected override MvxLogProviderType GetDefaultLogProviderType() => MvxLogProviderType.None;
     }
 }

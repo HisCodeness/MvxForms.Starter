@@ -7,11 +7,9 @@
      xmlns:viewModels="clr-namespace:MvxForms.Starter.ViewModels"
      xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms">
     <StackLayout VerticalOptions="Center">
-        <Entry Text="{Binding Text}" Margin="20"/>
-        <Button Command="{Binding ResetTextCommand}" Text="Click me" Margin="20"/>
-        <Button Command="{Binding NextCommand}" Text="Go next" Margin="20"/>
-        <Label Text="{Binding Time, Mode=OneWay}" Margin="20"/>
+        <Entry AutomationId="EntryText" Text="{Binding Text}" Margin="20"/>
+        <Button AutomationId="BtnReset" Command="{Binding ResetTextCommand}" Text="Click me" Margin="20"/>
+        <Button AutomationId="BtnNext" Command="{Binding NextCommand}" Text="Go next" Margin="20"/>
+        <Label AutomationId="LblTime" Text="{Binding Time, Mode=OneWay}" Margin="20"/>
     </StackLayout>
-
-
 </d:MvxContentPage>

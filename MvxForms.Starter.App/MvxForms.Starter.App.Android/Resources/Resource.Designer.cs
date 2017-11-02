@@ -5912,9 +5912,6 @@ namespace MvxForms.Starter.App.Droid
 			// aapt resource value: 0x7f0c0038
 			public const int character_counter_pattern = 2131492920;
 			
-			// aapt resource value: 0x7f0c003e
-			public const int library_name = 2131492926;
-			
 			// aapt resource value: 0x7f0c0000
 			public const int mr_button_content_description = 2131492864;
 			

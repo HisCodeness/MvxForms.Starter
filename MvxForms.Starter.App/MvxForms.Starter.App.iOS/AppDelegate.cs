@@ -16,7 +16,7 @@ namespace MvxForms.Starter.App.iOS
     {
         public override UIWindow Window { get; set; }
 
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
@@ -31,6 +31,19 @@ namespace MvxForms.Starter.App.iOS
             Window.MakeKeyAndVisible();
 
             return true;
+        }
+
+        /// <summary>
+        /// Finish launching, required for test cloud
+        /// </summary>
+        /// <param name="application"></param>
+        public override void FinishedLaunching(UIApplication application)
+        {
+            base.FinishedLaunching(application);
+
+#if ENABLE_TEST_CLOUD
+            Xamarin.Calabash.Start();
+#endif
         }
     }
 }
