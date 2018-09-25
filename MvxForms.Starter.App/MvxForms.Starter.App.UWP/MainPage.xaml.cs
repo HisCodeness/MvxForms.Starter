@@ -1,9 +1,4 @@
-﻿using MvvmCross.Core.ViewModels;
-using MvvmCross.Core.Views;
-using MvvmCross.Forms.Uwp.Presenters;
-using MvvmCross.Platform;
-
-namespace MvxForms.Starter.App.UWP
+﻿namespace MvxForms.Starter.App.UWP
 {
     /// <summary>
     /// Main page class
@@ -16,13 +11,6 @@ namespace MvxForms.Starter.App.UWP
         public MainPage()
         {
             InitializeComponent();
-
-            var start = Mvx.Resolve<IMvxAppStart>();
-            start.Start();
-
-            var presenter = Mvx.Resolve<IMvxViewPresenter>() as MvxFormsUwpViewPresenter;
-
-            LoadApplication(presenter.FormsApplication);
         }
     }
 }

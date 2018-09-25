@@ -3,7 +3,7 @@
 namespace MvxForms.Starter.App.iOS
 {
     /// <summary>
-    /// iOS application
+    /// Application
     /// </summary>
     public class Application
     {

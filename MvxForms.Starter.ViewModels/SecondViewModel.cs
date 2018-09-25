@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using MvvmCross.Core.Navigation;
-using MvvmCross.Core.ViewModels;
+using MvvmCross.Commands;
+using MvvmCross.Navigation;
 
 namespace MvxForms.Starter.ViewModels
 {

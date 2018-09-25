@@ -3,7 +3,7 @@
     /// <summary>
     /// Test app service interface
     /// </summary>
-    public interface IAppService : IService
+    public interface IAppService
     {
         /// <summary>
         /// What time is it ?
