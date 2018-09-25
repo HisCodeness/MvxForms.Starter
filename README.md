@@ -2,7 +2,7 @@
 Starter kit for Xamarin Forms app using Mvvmcross  
 
 Current Mvvmcross version : 6.2 <p>
-Current Xamarin Forms version : 2.4.0.38779
+Current Xamarin Forms version : 3.2.0.839982
 
 Platforms available : iOS, Android, UWP & WPF !
 
