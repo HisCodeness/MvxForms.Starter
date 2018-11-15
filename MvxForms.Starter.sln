@@ -13,15 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxForms.Starter.Services",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxForms.Starter.ViewModels", "MvxForms.Starter.ViewModels\MvxForms.Starter.ViewModels.csproj", "{AF3BD2D3-C66D-46B1-9EC5-3E6332E1413D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.iOS", "MvxForms.Starter.App\MvxForms.Starter.App.iOS\MvxForms.Starter.App.iOS.csproj", "{2916CDEF-F71B-4FC6-9E0B-CBC1F80E9424}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.iOS", "Apps\MvxForms.Starter.App.iOS\MvxForms.Starter.App.iOS.csproj", "{2916CDEF-F71B-4FC6-9E0B-CBC1F80E9424}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.UWP", "MvxForms.Starter.App\MvxForms.Starter.App.UWP\MvxForms.Starter.App.UWP.csproj", "{1028BBDF-E359-42E4-A8DD-E7D90092082B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.UWP", "Apps\MvxForms.Starter.App.UWP\MvxForms.Starter.App.UWP.csproj", "{1028BBDF-E359-42E4-A8DD-E7D90092082B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxForms.Starter.App", "MvxForms.Starter.App\MvxForms.Starter.App\MvxForms.Starter.App.csproj", "{CB947511-DE39-4966-BB30-8EACD18A6BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvxForms.Starter.App", "Apps\MvxForms.Starter.App\MvxForms.Starter.App.csproj", "{CB947511-DE39-4966-BB30-8EACD18A6BAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.Android", "MvxForms.Starter.App\MvxForms.Starter.App.Android\MvxForms.Starter.App.Android.csproj", "{11003BD5-D416-4F31-8F77-81F73E4496B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.Android", "Apps\MvxForms.Starter.App.Android\MvxForms.Starter.App.Android.csproj", "{11003BD5-D416-4F31-8F77-81F73E4496B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.WPF", "MvxForms.Starter.App\MvxForms.Starter.App.WPF\MvxForms.Starter.App.WPF.csproj", "{A11B0A1B-3C89-47D7-9E6F-B0F0739661DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.App.WPF", "Apps\MvxForms.Starter.App.WPF\MvxForms.Starter.App.WPF.csproj", "{A11B0A1B-3C89-47D7-9E6F-B0F0739661DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxForms.Starter.Tests.Unit.Services", "MvxForms.Starter.Tests.Unit.Services\MvxForms.Starter.Tests.Unit.Services.csproj", "{DEDA9490-A14A-4145-9BD1-CB1A018AC1A6}"
 EndProject
