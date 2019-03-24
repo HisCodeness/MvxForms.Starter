@@ -19,7 +19,7 @@ namespace MvxForms.Starter.Tests.Unit.ViewModels
         {
             Setup();
 
-            var secondViewModel = new SecondViewModel(Ioc.Resolve<IMvxNavigationService>());
+            var secondViewModel = new SecondViewModel();
             Assert.AreEqual("Second page, ", secondViewModel.Title);
         }
 
@@ -28,7 +28,7 @@ namespace MvxForms.Starter.Tests.Unit.ViewModels
         {
             Setup();
 
-            var secondViewModel = new SecondViewModel(Ioc.Resolve<IMvxNavigationService>());
+            var secondViewModel = new SecondViewModel();
             secondViewModel.Prepare("test");
             secondViewModel.Initialize();
 

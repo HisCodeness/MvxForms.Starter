@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using MvvmCross.Commands;
-using MvvmCross.Navigation;
+using MvxForms.Starter.ViewModels.Base;
 
 namespace MvxForms.Starter.ViewModels
 {
@@ -10,22 +10,9 @@ namespace MvxForms.Starter.ViewModels
     public class SecondViewModel : BaseViewModel<string, string>
     {
         /// <summary>
-        /// Navigation service
-        /// </summary>
-        private readonly IMvxNavigationService navigationService;
-
-        /// <summary>
         /// Main page text
         /// </summary>
         private string text;
-
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public SecondViewModel(IMvxNavigationService navigationService)
-        {
-            this.navigationService = navigationService;
-        }
 
         /// <summary>
         /// Initialize view model
@@ -43,7 +30,7 @@ namespace MvxForms.Starter.ViewModels
 
         private void GoBack()
         {
-            navigationService.Close(this, "BackParam");
+            NavigationService.Close(this, "BackParam");
         }
 
         public string Title

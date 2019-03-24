@@ -28,7 +28,7 @@ namespace MvxForms.Starter.Tests.Unit.ViewModels
         {
             Setup();
 
-            var mainViewModel = new FirstViewModel(Ioc.Resolve<IAppService>(), Ioc.Resolve<IMvxNavigationService>());
+            var mainViewModel = new FirstViewModel(Ioc.Resolve<IAppService>());
             Assert.AreEqual(DateTime.Now.ToString("H:mm:ss"), mainViewModel.Time);
             Assert.AreEqual("Hello MvvmCross !", mainViewModel.Text);
         }
@@ -38,7 +38,7 @@ namespace MvxForms.Starter.Tests.Unit.ViewModels
         {
             Setup();
 
-            var mainViewModel = new FirstViewModel(Ioc.Resolve<IAppService>(), Ioc.Resolve<IMvxNavigationService>());
+            var mainViewModel = new FirstViewModel(Ioc.Resolve<IAppService>());
             mainViewModel.ResetTextCommand.Execute();
             Assert.AreEqual("Hello MvvmCross", mainViewModel.Text);
         }
@@ -48,7 +48,7 @@ namespace MvxForms.Starter.Tests.Unit.ViewModels
         {
             Setup();
 
-            var mainViewModel = new FirstViewModel(Ioc.Resolve<IAppService>(), Ioc.Resolve<IMvxNavigationService>());
+            var mainViewModel = new FirstViewModel(Ioc.Resolve<IAppService>());
             mainViewModel.NextCommand.Execute();
             Assert.AreEqual("Hello MvvmCross !back parameter", mainViewModel.Text);
         }

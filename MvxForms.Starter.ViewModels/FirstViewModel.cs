@@ -1,14 +1,14 @@
 using System.Threading.Tasks;
 using MvvmCross.Commands;
-using MvvmCross.Navigation;
 using MvxForms.Starter.Services;
+using MvxForms.Starter.ViewModels.Base;
 
 namespace MvxForms.Starter.ViewModels
 {
     /// <summary>
     /// FirstViewModel class
     /// </summary>
-    public class FirstViewModel : BaseViewModel<object, object>
+    public class FirstViewModel : BaseViewModel
     {
         /// <summary>
         /// Test app service
@@ -16,18 +16,12 @@ namespace MvxForms.Starter.ViewModels
         private readonly IAppService appService;
 
         /// <summary>
-        /// Navigation Service
-        /// </summary>
-        private readonly IMvxNavigationService navigationService;
-
-        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="appService"></param>
-        public FirstViewModel(IAppService appService, IMvxNavigationService navigationService)
+        public FirstViewModel(IAppService appService)
         {
             this.appService = appService;
-            this.navigationService = navigationService;
         }
 
         /// <summary>
@@ -52,7 +46,7 @@ namespace MvxForms.Starter.ViewModels
         public IMvxCommand NextCommand => new MvxAsyncCommand(GoNext);
         private async Task GoNext()
         {
-            var result = await navigationService.Navigate<SecondViewModel, string, string>(text);
+            var result = await NavigationService.Navigate<SecondViewModel, string, string>(text);
             Text += result;
         }
 
